@@ -19,8 +19,7 @@ namespace NHapi.Base
 
 		private PackageManager()
 		{
-			LoadBaseVersions();
-			LoadAdditionalVersions();
+			LoadBaseVersions();			
 		}
 
 		#endregion
@@ -48,18 +47,6 @@ namespace NHapi.Base
 			{
 				string packageName = GetVersionPackageName(version);
 				_packages.Add(new Hl7Package(packageName, version));
-			}
-		}
-
-		private void LoadAdditionalVersions()
-		{
-			var configSection = ConfigurationManager.GetSection("Hl7PackageCollection") as HL7PackageConfigurationSection;
-			if (configSection != null)
-			{
-				foreach (HL7PackageElement package in configSection.Packages)
-				{
-					_packages.Insert(0, new Hl7Package(package.Name, package.Version));
-				}
 			}
 		}
 
