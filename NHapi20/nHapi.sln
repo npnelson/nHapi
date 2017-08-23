@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHapi.NUnit.SourceGeneratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHapi.TestHarness", "NHapi.TestHarness\NHapi.TestHarness.csproj", "{02AF3386-DEBB-4A79-B3A5-A925C2797306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHapi.TestHarness.Core", "NHapi.TestHarness.Core\NHapi.TestHarness.Core.csproj", "{ECA428C1-F884-4A6B-901E-4DFFAF9F7A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHapi.TestHarness.Core", "NHapi.TestHarness.Core\NHapi.TestHarness.Core.csproj", "{ECA428C1-F884-4A6B-901E-4DFFAF9F7A85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
