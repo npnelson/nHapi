@@ -97,12 +97,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\nHapi.Base\NHapi.Base.csproj">
-      <Project>{5A080123-0597-46C3-AE78-2007EFB0DD68}</Project>
-      <Name>NHapi.Base</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>

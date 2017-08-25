@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\nHapi.Base\NHapi.Base.csproj">
-      <Project>{5a080123-0597-46c3-ae78-2007efb0dd68}</Project>
-      <Name>NHapi.Base</Name>
+    <ProjectReference Include="..\NHapi.Base\NHapi.Base.NetStandard.csproj">
+      <Project>{dc524ecf-c56c-4192-a0a5-645202e42136}</Project>
+      <Name>NHapi.Base.NetStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

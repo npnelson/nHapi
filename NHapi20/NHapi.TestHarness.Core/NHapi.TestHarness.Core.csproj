@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\nHapi.Base\NHapi.Base.csproj" />
     <ProjectReference Include="..\NHapi.Model.V23\NHapi.Model.V23.csproj" />
   </ItemGroup>
 

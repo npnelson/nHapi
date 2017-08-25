@@ -266,8 +266,8 @@ namespace NHapi.Base
 			//try to get error condition text
 			try
 			{
-				String desc = TableRepository.Instance.getDescription(357, Convert.ToString(errCode));
-				Terser.Set(errorSegment, 1, rep, 4, 2, desc);
+				//String desc = TableRepository.Instance.getDescription(357, Convert.ToString(errCode));
+				Terser.Set(errorSegment, 1, rep, 4, 2, "Error Lookup Is Not Implemented");
 			}
 			catch (LookupException e)
 			{

@@ -50,16 +50,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelGenerator\ModelGenerator.csproj">
-      <Project>{ebb8e9c9-7ff2-49c4-96ef-c5b87e4c2617}</Project>
-      <Name>ModelGenerator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\nHapi.Base\NHapi.Base.csproj">
-      <Project>{5a080123-0597-46c3-ae78-2007efb0dd68}</Project>
-      <Name>NHapi.Base</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

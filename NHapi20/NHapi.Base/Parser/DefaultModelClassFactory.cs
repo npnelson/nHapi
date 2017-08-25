@@ -6,22 +6,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using NHapi.Base;
 using NHapi.Base.Model;
-using NHapi.Base.SourceGeneration;
 using NHapi.Base.Log;
-using NHapi.Base.Model.Configuration;
 
 namespace NHapi.Base.Parser
 {
-	/// <summary> Default implementation of ModelClassFactory.  See PackageList() for configuration instructions. 
-	/// 
-	/// </summary>
-	/// <author>  <a href="mailto:bryan.tripp@uhn.on.ca">Bryan Tripp</a>
-	/// </author>
-	/// <version>  $Revision: 1.2 $ updated on $Date: 2005/05/24 18:15:39 $ by $Author: bryan_tripp $
-	/// </version>
-	public class DefaultModelClassFactory : IModelClassFactory
+   /// <summary> Default implementation of ModelClassFactory.  See PackageList() for configuration instructions. 
+   /// 
+   /// </summary>
+   /// <author>  <a href="mailto:bryan.tripp@uhn.on.ca">Bryan Tripp</a>
+   /// </author>
+   /// <version>  $Revision: 1.2 $ updated on $Date: 2005/05/24 18:15:39 $ by $Author: bryan_tripp $
+   /// </version>
+   public class DefaultModelClassFactory : IModelClassFactory
 	{
 		private static readonly object _lockObject = new object();
 		private static readonly IHapiLog log;
