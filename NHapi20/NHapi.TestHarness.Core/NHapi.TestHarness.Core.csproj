@@ -21,10 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NHapi.Model.V23\NHapi.Model.V23.csproj" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <ProjectReference Include="..\NHapi.Model.V23\NHapi.Model.V23.csproj" />
   </ItemGroup>
 </Project>
