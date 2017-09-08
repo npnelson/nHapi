@@ -2,6 +2,7 @@
 using Microsoft.WindowsAzure.Storage;
 using NHapi.Base.Parser;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NHapi.TestHarness.Core
@@ -20,7 +21,9 @@ namespace NHapi.TestHarness.Core
 		 var msgString = await blob.DownloadTextAsync();
 		 var parser = new PipeParser();
 		 var temp = parser.Parse(msgString);
-			
+		 var zpv=temp.GetRawSegmentString("ZPV").Single();
+		 var zpvFields = zpv.Split('|');
+		 //var segs=temp.Get	
 		 Console.ReadLine();
 	  }
    }

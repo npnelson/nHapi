@@ -24,6 +24,7 @@ using System.Text;
 using NHapi.Base.Parser;
 using NHapi.Base.validation;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace NHapi.Base.Model
 {
@@ -32,6 +33,7 @@ namespace NHapi.Base.Model
 	/// </author>
 	public abstract class AbstractMessage : AbstractGroup, IMessage
 	{
+		
 		/// <summary> Returns this Message object - this is an implementation of the 
 		/// abstract method in AbstractGroup.  
 		/// </summary>
@@ -90,8 +92,15 @@ namespace NHapi.Base.Model
 
 			set { myContext = value; }
 		}
+	  public string[] GetRawSegmentString(string segmentName)
+	  {
+		 var retval = OriginalMessage.Split('\r').Where(x => x.StartsWith(segmentName)).ToArray();
+		 return retval;
+	  }
 
-		private IValidationContext myContext;
+	  public string OriginalMessage { get ;set; }
+
+	  private IValidationContext myContext;
 
 		/// <param name="theFactory">factory for model classes (e.g. group, segment) for this message 
 		/// </param>

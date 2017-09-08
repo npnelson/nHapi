@@ -285,7 +285,7 @@ namespace NHapi.Base.Parser
 			//try to instantiate a message object of the right class
 			MessageStructure structure = GetStructure(message);
 			IMessage m = InstantiateMessage(structure.messageStructure, version, structure.explicitlyDefined);
-
+		 m.OriginalMessage = message;
 			//MessagePointer ptr = new MessagePointer(this, m, getEncodingChars(message));
 			MessageIterator messageIter = new MessageIterator(m, "MSH", true);
 			FilterIterator.IPredicate segmentsOnly = new AnonymousClassPredicate(this);
