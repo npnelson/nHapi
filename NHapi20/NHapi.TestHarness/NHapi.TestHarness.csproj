@@ -53,6 +53,10 @@
       <Project>{dc524ecf-c56c-4192-a0a5-645202e42136}</Project>
       <Name>NHapi.Base.NetStandard</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NHapi.Model.V24\NHapi.Model.V24.csproj">
+      <Project>{3777c27e-5cd6-4154-b62d-da53a9d0f0ca}</Project>
+      <Name>NHapi.Model.V24</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
