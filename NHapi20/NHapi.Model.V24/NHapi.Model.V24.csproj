@@ -2,6 +2,8 @@
   <Import Project="..\version.props" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>NHapi.Model.V24.NetStandard</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

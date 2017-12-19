@@ -36,7 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHapi.Model.V251", "NHapi.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHapi.Model.V271", "NHapi.Model.V271\NHapi.Model.V271.csproj", "{AE80A44A-19D3-4F09-A005-0F4C4894227B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHapi.Model.V81", "NHapi.Model.V281\NHapi.Model.V81.csproj", "{3414C610-49B6-4C36-BEA4-B23274A9F22D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NHapi.Model.V281", "NHapi.Model.V281\NHapi.Model.V281.csproj", "{3414C610-49B6-4C36-BEA4-B23274A9F22D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
