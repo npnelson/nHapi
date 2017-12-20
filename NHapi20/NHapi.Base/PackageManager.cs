@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Text;
-using NHapi.Base.Model.Configuration;
 
 namespace NHapi.Base
 {
@@ -19,8 +17,7 @@ namespace NHapi.Base
 
 		private PackageManager()
 		{
-			LoadBaseVersions();
-			LoadAdditionalVersions();
+			LoadBaseVersions();			
 		}
 
 		#endregion
@@ -51,18 +48,6 @@ namespace NHapi.Base
 			}
 		}
 
-		private void LoadAdditionalVersions()
-		{
-			var configSection = ConfigurationManager.GetSection("Hl7PackageCollection") as HL7PackageConfigurationSection;
-			if (configSection != null)
-			{
-				foreach (HL7PackageElement package in configSection.Packages)
-				{
-					_packages.Insert(0, new Hl7Package(package.Name, package.Version));
-				}
-			}
-		}
-
 		public bool IsValidVersion(string version)
 		{
 			version = version.ToUpper().Trim();
@@ -85,17 +70,17 @@ namespace NHapi.Base
 		/// </summary>
 		public static String GetVersionPackagePath(String ver)
 		{
-			StringBuilder path = new StringBuilder("NHapi.Model.V");
-			char[] versionChars = new char[ver.Length];
-			SupportClass.GetCharsFromString(ver, 0, ver.Length, versionChars, 0);
-			for (int i = 0; i < versionChars.Length; i++)
-			{
-				if (versionChars[i] != '.')
-					path.Append(versionChars[i]);
-			}
-			path.Append("/");
-			return path.ToString();
-		}
+		 StringBuilder path = new StringBuilder("NHapi.Model.V");
+		 char[] versionChars = new char[ver.Length];
+		 SupportClass.GetCharsFromString(ver, 0, ver.Length, versionChars, 0);
+		 for (int i = 0; i < versionChars.Length; i++)
+		 {
+			if (versionChars[i] != '.')
+			   path.Append(versionChars[i]);
+		 }
+		 path.Append("/");
+		 return path.ToString();
+	  }
 
 
 		/// <summary> Returns the package name for model elements of the given version - e.g.
