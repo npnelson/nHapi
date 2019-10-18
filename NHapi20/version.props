@@ -1,5 +1,5 @@
 <Project>
     <PropertyGroup>
-        <Version>2.5.0.8</Version>       
+        <VersionPrefix>1.0.1</VersionPrefix>       
     </PropertyGroup>
 </Project>

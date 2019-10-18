@@ -17,13 +17,19 @@ namespace NHapi.TestHarness.Core
 
 		 var blobClient = storageAccount.CreateCloudBlobClient();
 		 var container = blobClient.GetContainerReference(azureSettings.StorageContainerName);
-		 var blob = container.GetBlockBlobReference("004c789c-b152-47d6-8e99-0f816c0619a9");
+		 var blob = container.GetBlockBlobReference("Test/201910/e55b99ab-8429-4c69-a726-8a03c7207505");
 		 var msgString = await blob.DownloadTextAsync();
 		 var parser = new PipeParser();
-		 var temp = parser.Parse(msgString);
-		 var zpv=temp.GetRawSegmentString("ZPV").Single();
-		 var zpvFields = zpv.Split('|');
-		 //var segs=temp.Get	
+		 var message = parser.Parse(msgString);
+		 var typedMessage = message as NHapi.Model.V23.Message.DFT_P03;
+		 var financial = typedMessage.GetFINANCIAL();
+		 var diag = financial.FT1.GetDiagnosisCode();
+
+		 var pr = financial.GetFINANCIAL_PROCEDURE();
+		 var pr1 = pr.PR1.ProcedureDateTime;
+		 //var zpv=temp.GetRawSegmentString("ZPV").Single();
+		 //var zpvFields = zpv.Split('|');
+		 ////var segs=temp.Get	
 		 Console.ReadLine();
 	  }
    }
